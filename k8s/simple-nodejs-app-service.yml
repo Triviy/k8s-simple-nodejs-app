@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: simple-nodejs-app-service
+spec:
+  type: NodePort
+  selector:
+    app: simple-nodejs-app
+  ports:
+  - port: 3000
+    targetPort: 3000
+    nodePort: 32545
